@@ -57,6 +57,30 @@ class MarkovArtist:
             current_color = next_color
 
         return palette
+    
+    def draw(self, palette):
+        """Draws the final art piece by creating a hexagon for each color in the
+           pallete at a special angle, forming the illusion of a cyber vortex.
+           Args:
+                palette (array): list of colors chosen
+        """
+        for cycle in range(CYCLES):
+            for i in range(6):
+                for color in palette:
+                    turtle.color(color)
+                    turtle.forward(150)
+                    turtle.right(62)
+                    turtle.forward(150)
+                    turtle.right(62)
+                    turtle.forward(150)
+                    turtle.right(62)
+                    turtle.forward(150)
+                    turtle.right(62)
+                    turtle.forward(150)
+                    turtle.right(62)
+                    turtle.forward(150)
+                    turtle.right(62)
+                    turtle.right(10.2)
 
 
 def main():
@@ -72,27 +96,11 @@ def main():
     new_palette = art_maker.compose_palette(START_COLOR, NUM_COLORS)
     print("Here's my latest turtle art palette: ", new_palette)
 
+    art_maker.draw(new_palette)
     print("Letting the turtle artist do its thing!")
-    for cycle in range(CYCLES):
-        for i in range(6):
-            for color in new_palette:
-                turtle.color(color)
-                turtle.forward(150)
-                turtle.right(62)
-                turtle.forward(150)
-                turtle.right(62)
-                turtle.forward(150)
-                turtle.right(62)
-                turtle.forward(150)
-                turtle.right(62)
-                turtle.forward(150)
-                turtle.right(62)
-                turtle.forward(150)
-                turtle.right(62)
-                turtle.right(10)
-                
-    print("Process completed! The turtle will now go back to its humble abode.")
+
     turtle.hideturtle()
+    print("Process completed! The turtle will now go back to its humble abode.")
 
 
 if __name__ == "__main__":
