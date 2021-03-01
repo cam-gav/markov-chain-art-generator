@@ -10,11 +10,11 @@ Date: February 2021
 import turtle
 import numpy as np
 
-turtle.bgcolor("black")
-turtle.pensize(3)
 turtle.speed(0)
+turtle.bgcolor("black")
+turtle.pensize(2)
 
-START_COLOR = "cyan"
+START_COLOR = "yellow"
 NUM_COLORS = 6
 CYCLES = 4 
 # Number of cycles to repeat the generated art pattern. More cycles means more 
@@ -61,11 +61,11 @@ class MarkovArtist:
 
 def main():
     art_maker = MarkovArtist({
-        "red": {"red": 0.3, "magenta": 0.5, "blue": 0.0, "cyan": 0.0, "green": 0.0, "yellow": 0.2},
-        "magenta": {"red": 0.3, "magenta": 0.4, "blue": 0.0, "cyan": 0.1, "green": 0.2, "yellow": 0.0},
+        "red": {"red": 0.2, "magenta": 0.6, "blue": 0.0, "cyan": 0.0, "green": 0.0, "yellow": 0.2},
+        "magenta": {"red": 0.3, "magenta": 0.3, "blue": 0.2, "cyan": 0.1, "green": 0.1, "yellow": 0.0},
         "blue": {"red": 0.0, "magenta": 0.3, "blue": 0.1, "cyan": 0.2, "green": 0.2, "yellow": 0.2},
-        "cyan": {"red": 0.1, "magenta": 0.1, "blue": 0.7, "cyan": 0.0, "green": 0.1, "yellow": 0.0},
-        "green": {"red": 0.0, "magenta": 0.2, "blue": 0.0, "cyan": 0.2, "green": 0.0, "yellow": 0.6},
+        "cyan": {"red": 0.0, "magenta": 0.2, "blue": 0.5, "cyan": 0.2, "green": 0.0, "yellow": 0.1},
+        "green": {"red": 0.0, "magenta": 0.0, "blue": 0.0, "cyan": 0.3, "green": 0.1, "yellow": 0.6},
         "yellow": {"red": 0.2, "magenta": 0.2, "blue": 0.2, "cyan": 0.2, "green": 0.1, "yellow": 0.1}
     })
 
@@ -77,9 +77,20 @@ def main():
         for i in range(6):
             for color in new_palette:
                 turtle.color(color)
-                turtle.circle(75)
-                turtle.left(10)
-
+                turtle.forward(150)
+                turtle.right(62)
+                turtle.forward(150)
+                turtle.right(62)
+                turtle.forward(150)
+                turtle.right(62)
+                turtle.forward(150)
+                turtle.right(62)
+                turtle.forward(150)
+                turtle.right(62)
+                turtle.forward(150)
+                turtle.right(62)
+                turtle.right(10)
+                
     print("Process completed! The turtle will now go back to its humble abode.")
     turtle.hideturtle()
 
