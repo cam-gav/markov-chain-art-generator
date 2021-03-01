@@ -8,14 +8,17 @@ turtle lessons from 1101 and apply Computational Creativity concepts to them.
 This nostalgic return to turtle was also personal to me because I am currently
 very interesting in the cyberpunk aesthetic. I love neon colors and sharp edges
 on a dark background. Some of the art produced by this program is reminiscent of
-the Tron: Legacy movie.
+the Tron: Legacy movie. This Markov Chain makes me think of how robots might
+handle artistic creation in a cyberpunk future.
 
 The transition matrix probabilities were chosen by personal taste in deciding
 how colors would best flow into each other. Choosing probabilities was a
 surprisingly creative and complex endeavor. It required predicting what
-possibilities could come each number in the matrix. Did I want all the colors
-to flow into each other or only some colors to be intimitely related and
+possibilities could come from each number in the matrix. Did I want all the
+colors to flow into each other or only some colors to be intimitely related and
 produced together in the final piece?
+I had to balance my artistic input versus giving the Markov Chain more
+randomness/autonomy.
 Future iterations can include more interesting designs as well as a second
 Markov Decision process that chooses the patterns that the turtle will follow.
 Other possiblities include exploring more color transitions and having a markov
